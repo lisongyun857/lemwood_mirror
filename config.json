@@ -1,0 +1,27 @@
+{
+  "check_cron": "*/10 * * * *",
+  "storage_path": "download",
+  "github_token": "",
+  "proxy_url": "",
+  "asset_proxy_url": "",
+  "xget_domain": "https://xget.xi-xu.me",
+  "xget_enabled": true,
+  "download_timeout_minutes": 40,
+  "launchers": [
+    {
+      "name": "fcl",
+      "source_url": "https://github.com/FCL-Team/FoldCraftLauncher",
+      "repo_selector": ""
+    },
+    {
+      "name": "zl",
+      "source_url": "https://github.com/ZalithLauncher/ZalithLauncher",
+      "repo_selector": ""
+    },
+    {
+      "name": "zl2",
+      "source_url": "https://github.com/ZalithLauncher/ZalithLauncher2",
+      "repo_selector": ""
+    }
+  ]
+}

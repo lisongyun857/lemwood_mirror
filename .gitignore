@@ -1,0 +1,8 @@
+# Binaries
+mirror.exe
+
+# Downloaded files
+download/
+
+# Trae AI specific files
+.trae/

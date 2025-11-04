@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <link rel="icon" href="/static/favicon.svg" type="image/svg+xml" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>启动器镜像状态</title>
+  <link rel="stylesheet" href="/static/style.css" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>启动器镜像</h1>
+      <button id="refresh">手动刷新</button>
+    </header>
+
+    <main>
+      <section>
+        <h2>版本信息</h2>
+        <div id="status"></div>
+      </section>
+
+      <section>
+        <h2>文件浏览</h2>
+        <div>
+          <input type="text" id="path" placeholder="相对路径，例如：." value="." />
+          <button id="list">浏览</button>
+        </div>
+        <pre id="files"></pre>
+      </section>
+    </main>
+
+    <footer>
+      <p>Lemwood Mirror</p>
+    </footer>
+  </div>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>
