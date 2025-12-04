@@ -13,6 +13,7 @@ import (
 
 	"lemwood_mirror/internal/browser"
 	"lemwood_mirror/internal/config"
+	"lemwood_mirror/internal/db"
 	"lemwood_mirror/internal/downloader"
 	gh "lemwood_mirror/internal/github"
 	"lemwood_mirror/internal/server"
@@ -34,6 +35,9 @@ func main() {
 	base := filepath.Join(projectRoot, cfg.StoragePath)
 	if err := server.EnsureDir(base); err != nil {
 		log.Fatalf("确保目录存在失败: %v", err)
+	}
+	if err := db.InitDB(base); err != nil {
+		log.Fatalf("初始化数据库失败: %v", err)
 	}
     s := server.NewState(base)
     if err := s.InitFromDisk(); err != nil {

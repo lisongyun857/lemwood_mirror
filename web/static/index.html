@@ -47,10 +47,45 @@
                 <p>返回指定启动器的最新版本信息。</p>
             </div>
             
+            <div class="api-endpoint">
+                <h3>5. 获取统计数据</h3>
+                <div class="method">GET /api/stats</div>
+                <p>返回访问量、下载量、排行和地域分布等统计数据。</p>
+            </div>
+
              <div class="api-endpoint">
-                <h3>5. 触发手动扫描</h3>
+                <h3>6. 触发手动扫描</h3>
                 <div class="method">POST /api/scan</div>
                 <p>触发服务器重新扫描上游仓库更新。</p>
+            </div>
+        </div>
+      </section>
+
+      <section id="statistics-section">
+        <h2>数据统计</h2>
+        <div class="stats-overview">
+            <div class="stat-card">
+                <h3>总访问量</h3>
+                <div class="stat-value" id="total-visits">-</div>
+            </div>
+            <div class="stat-card">
+                <h3>总下载量</h3>
+                <div class="stat-value" id="total-downloads">-</div>
+            </div>
+        </div>
+
+        <div class="stats-grid">
+            <div class="stats-panel">
+                <h3>最近 30 天趋势</h3>
+                <div class="chart-container" id="daily-chart"></div>
+            </div>
+            <div class="stats-panel">
+                <h3>热门下载 (Top 10)</h3>
+                <div class="list-container" id="top-downloads"></div>
+            </div>
+            <div class="stats-panel">
+                <h3>访客地域分布</h3>
+                <div class="list-container" id="geo-dist"></div>
             </div>
         </div>
       </section>
