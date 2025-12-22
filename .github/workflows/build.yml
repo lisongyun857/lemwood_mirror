@@ -38,7 +38,7 @@ jobs:
       run: GOOS=linux GOARCH=amd64 go build -o mirror ./cmd/mirror
 
     - name: Package Windows Artifact
-      run: zip -r mirror-windows.zip mirror.exe config.json web
+      run: zip -r mirror-windows.zip mirror.exe config.json web/dist
 
     - name: Upload Windows Package
       uses: actions/upload-artifact@v4
@@ -47,7 +47,7 @@ jobs:
         path: mirror-windows.zip
 
     - name: Package Linux Artifact
-      run: tar -czvf mirror-linux.tar.gz mirror config.json web
+      run: tar -czvf mirror-linux.tar.gz mirror config.json web/dist
 
     - name: Upload Linux Package
       uses: actions/upload-artifact@v4
