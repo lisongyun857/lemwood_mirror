@@ -1,6 +1,9 @@
-# 启动器自动镜像程序
+# 柠枺镜像 (Lemwood Mirror)
 
 本项目实现自动从 GitHub 获取指定启动器（fcl、zl、zl2）的最新 release，并将资产文件下载到本地存储结构，同时提供一个简单的黑白风格前端页面展示版本信息与下载链接，并具备基本文件浏览功能。
+
+## 🌐 在线演示
+- **官方镜像站**: [https://mirror.lemwood.icu/](https://mirror.lemwood.icu/)
 
 ## 功能概述
 - 通过浏览器模拟（colly）获取启动器的 GitHub 仓库地址。
@@ -39,7 +42,7 @@
 - `check_cron`: 自动检查更新的 cron 表达式，默认为每 10 分钟检查一次 (`*/10 * * * *`)。
 - `proxy_url`: 用于网络请求的 HTTP/HTTPS 代理地址，例如 `http://127.0.0.1:7890`。
 - `asset_proxy_url`: 用于加速 GitHub Release 资源下载的代理地址，会作为前缀拼接到下载链接前。
-- `xget_domain`: Xget 服务域名，用于加速 GitHub 仓库的访问和下载。
+- `xget_domain`: Xget 服务域名，用于加速 GitHub 仓库的访问 and 下载。
 - `xget_enabled`: 是否启用 Xget 加速，`true` 或 `false`。
 - `download_timeout_minutes`: 下载单个文件的超时时间（分钟），默认为 40。
 - `concurrent_downloads`: 并发下载数，默认为 3。
